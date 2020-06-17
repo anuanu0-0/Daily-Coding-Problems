@@ -59,10 +59,14 @@ int main()
     return 0;
 }
 
+
 //    MODIFIED FOR CORNER CASES:
 //        Returns indices i & j.
 
 /*
+
+    ALSO LEETCODE 1st Solution: 
+    
     vector<int> twoSum(vector<int> &nums, int target)
     {
         unordered_map<int, int> um;

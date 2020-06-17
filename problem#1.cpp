@@ -8,10 +8,14 @@
 //Time Complexity: 0(n)
 //Space Complexity: 0(n)
 
-//Corner Case: eg- For v{2, 14, 5, 3} and k = 4
+//Corner Case: eg-
+// *  For v{3,3} and k = 6
+// *  For v{3, 2, 4} and k = 6 , O/p must be {2, 4} and not {3,3}
+//Refer end.
 
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include <unordered_set>
 
 #define FAST                          \
@@ -52,3 +56,31 @@ int main()
 
     return 0;
 }
+
+//    MODIFIED FOR CORNER CASES:
+//        Returns indices i & j.
+
+/*
+    vector<int> twoSum(vector<int> &nums, int target)
+    {
+        unordered_map<int, int> um;
+        int s1, s2;
+
+        for (int i = 0; i < nums.size(); i++)
+        {
+            int numToFind = target - nums[i];
+
+            if (um.find(numToFind) != um.end())
+            {
+                s1 = um[numToFind];
+                s2 = i;
+                return {s1, s2};
+            }
+            um[nums[i]] = i;
+        }
+
+        return {-1, -1};
+    }
+
+
+*/

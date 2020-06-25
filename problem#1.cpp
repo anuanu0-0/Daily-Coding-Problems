@@ -59,19 +59,21 @@ int main()
     return 0;
 }
 
+
 //    MODIFIED FOR CORNER CASES:
 //        Returns indices i & j.
 
 /*
+
+    ALSO LEETCODE 1.Two Sum Solution: 
+    
     vector<int> twoSum(vector<int> &nums, int target)
-    {
+    {   
         unordered_map<int, int> um;
         int s1, s2;
-
         for (int i = 0; i < nums.size(); i++)
         {
             int numToFind = target - nums[i];
-
             if (um.find(numToFind) != um.end())
             {
                 s1 = um[numToFind];
@@ -80,7 +82,6 @@ int main()
             }
             um[nums[i]] = i;
         }
-
         return {-1, -1};
     }
 

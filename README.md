@@ -40,7 +40,9 @@ class Node:
         self.left = left
         self.right = right
 </pre>
-The following test should pass:
 
+The following test should pass:
+<pre>
 node = Node('root', Node('left', Node('left.left')), Node('right'))
 assert deserialize(serialize(node)).left.left.val == 'left.left'
+</pre>
